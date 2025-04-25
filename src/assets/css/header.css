@@ -1,0 +1,138 @@
+/* Wrapper */
+.portfolio--header--body {
+  height: 70px;
+  width: 100vw;
+  padding: 1rem;
+  /* padding-left: 1em; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #e7e2e7, #8ca5db);
+  animation: slideDown 1s ease-out forwards;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Logo / Tag */
+  .portfolio--header--tag {
+    font-size: 2.8em;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    animation: scaleFade 1.2s ease-in-out;
+  }
+  
+
+  .portfolio--header--items {
+    width: 60vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .portfolio--header--items li a {
+    /* font-weight: 600;
+    color: #101010;
+    text-decoration: none;
+    font-size: 1.2em;
+    position: relative;
+    transition: color 0.3s ease-in-out; */
+
+    font-weight: 600;
+    color: #0b18cb;
+    text-decoration: none;
+    font-size: 1.2em;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    font-family: serif;
+  }
+  
+
+  .portfolio--header--items li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #382ea6;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .portfolio--header--items li a:hover::after {
+    width: 100%;
+  }
+  
+  .portfolio--header--items li a:hover {
+    color: #f6542b;
+  }
+  
+  /* Animations */
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleFade {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .portfolio--header--body {
+      min-width: 100vw;
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .portfolio--header--items {
+      /* flex-direction: column; */
+      gap: 0.5rem;
+      
+    }
+  
+    .portfolio--header--tag {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+
+  @keyframes colorWave {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 200%;
+    }
+  }
+  
+  .portfolio--header--tag {
+    font-size: 3em;
+    font-weight: bold;
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #ff7e5f, #a18cd1, #fbc2eb);
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorWave 5s linear infinite;
+  }
+  

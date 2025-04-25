@@ -1,0 +1,18 @@
+.portfolio--main--page{
+    margin: 0px;
+    padding: 0px;
+    border: 0.1px solid black;
+    height: 100%;
+    width: 100%;
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+  @media (max-width: 768px) {
+    .portfolio--main--page {
+      min-width: 100vw;
+      /* flex-direction: column; */
+      /* padding: 1rem; */
+    }
+}

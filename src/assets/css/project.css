@@ -1,0 +1,216 @@
+.project--main--section {
+  /* margin: 4rem 0; */
+  /* padding: 2rem; */
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+  padding-top: 5rem;
+  min-height: 100vh;
+  /* width: 100vw; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project--header-section {
+  /* margin-bottom: 3rem; */
+  text-align: center;
+}
+
+.project--header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  color: darkmagenta
+}
+
+.project--header::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #4776E6, #8E54E9);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.project--welcome--line {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 1rem auto 0;
+}
+
+.project--body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  height: 80vh;
+}
+
+.project--section--intro {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+  position: relative;
+  transition: all 0.4s ease;
+  display: grid;
+  grid-template-rows: 2fr 3fr 1fr;
+}
+
+.project--section--intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.04);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project--section--intro:hover::before {
+  opacity: 1;
+}
+
+.project-image {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  transition: transform 0.5s ease;
+}
+
+.project--section--intro:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-content {
+  padding: 0.5rem;
+}
+
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.project-description {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.project--section--tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  gap: 0.5rem;
+}
+
+.project--tags {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  background: #f9fafb;
+  color: #4776E6;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.project--tags:hover {
+  background: linear-gradient(90deg, #4776E6, #8E54E9);
+  color: white;
+}
+
+.project-links {
+  display: flex;
+  width: -webkit-fill-available;
+  /* margin-top: 1rem; */
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 17px;
+  position: relative;
+  bottom: 10px;
+}
+
+.project-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  flex: 1;
+  transform: translateY(0);
+  height: 30px;
+}
+
+.project-links a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-links a.code-link {
+  background-color: #f3f4f6;
+  color: #333;
+  border: 1px solid #e5e7eb;
+}
+
+.project-links a.demo-link {
+  background-color: #4776E6;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project--body {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .project--header {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project--main--section {
+    padding: 1rem;
+  }
+
+  .project--body {
+    grid-template-columns: 1fr;
+  }
+}
+
+.button--resume--icon {
+  background: linear-gradient(135deg, #f12711, #f5af19);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+}
+
+.project-links a.demo-link {
+  background: linear-gradient(135deg, #f12711, #f5af19);
+  color: white;
+}
