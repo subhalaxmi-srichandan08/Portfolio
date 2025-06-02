@@ -1,13 +1,14 @@
 import React from 'react'
 import "../assets/css/about.css"
-import coming_soon from "../assets/images/profilepicturess.PNG"
+import subbie from "../assets/images/profilepicturess.PNG"
 
 function About() {
     return (
         <div className='about--section--main--div'>
             {/* Profile Picture or Animation */}
             <div className='about--section--picture--section'>
-                <img src={coming_soon} alt="Subhalaxmi Srichandan" />
+                {/* Subiee :)  */}
+                <img src={subbie} alt="Subhalaxmi Srichandan" />
                 {/* OR */}
                 {/* <Lottie animationData={developerAnimation} loop={true} /> */}
             </div>
@@ -23,7 +24,7 @@ function About() {
 
                 {/* Highlights */}
                 <div className='about--page--highlights'>
-                    <h3>What I Do</h3>
+                    <h3> What I Do</h3>  {/* :) nothing */}
                     <ul>
                         <li>Full-Stack Development with MERN</li>
                         <li>Passionate about UI/UX & Backend Architecture</li>
@@ -35,7 +36,6 @@ function About() {
                 </div>
             </div>l
         </div>
-
     )
 }
 

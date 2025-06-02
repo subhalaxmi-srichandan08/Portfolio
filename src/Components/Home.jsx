@@ -7,13 +7,11 @@ import { motion } from "framer-motion";
 import { IoMdDownload } from "react-icons/io";
 
 function Home() {
-
   const openPDF = () => {
     const pdfUrl = "https://drive.google.com/file/d/1e2B8lAuLyBZsLQXnFTxrNfRuZ--QUce0/view?usp=drive_link";
     window.open(pdfUrl, "_blank");
   };
-  
-  
+
   return (
     <div className="home--page--main--section">
       {/* Left Section - Intro */}
@@ -37,14 +35,14 @@ function Home() {
                   "I develop scalable backend solutions",
                   "I turn ideas into reality with code",
                   "I optimize performance and security",
-                  "I create modern and interactive UIs",
+                  "I create modern and interactive UI's",
                   "I bring designs to life with React.js",
                   "I architect robust APIs with Node.js",
                   "I work with MongoDB, Express, React & Node",
                   "I solve real-world problems with technology",
                   "I love writing clean and efficient code",
                   "I innovate with the power of MERN Stack",
-                  "I develop full-stack applications from scratch"
+                  "I develop full-stack applications from scratch",
                 ],
                 autoStart: true,
                 loop: true,
@@ -55,35 +53,44 @@ function Home() {
           </h2>
         </div>
 
-        <div className="buuton--resume--dowmload">
+        <div className="button--resume--download">
           <motion.button
-          onClick={openPDF}
+            onClick={openPDF}
             className="button--resume--icon animated--resume--button"
             whileHover={{
-              scale: 1.1,
-              boxShadow: "0 0 20px rgba(74, 108, 247, 0.7)",
-              rotate: [0, -3, 3, 0],
+              scale: 1.05,
+              boxShadow: "0 0 15px rgba(74, 108, 247, 0.5)",
             }}
-            whileTap={{ scale: 0.95, rotate: -5 }}
-            animate={{ scale: [1, 1.05, 1], transition: { repeat: Infinity, duration: 2 } }}
+            whileTap={{ scale: 0.95 }}
+            animate={{ scale: [1, 1.03, 1], transition: { repeat: Infinity, duration: 2 } }}
           >
             <IoMdDownload size={20} />
-            
             Resume
           </motion.button>
         </div>
 
-
         {/* Buttons */}
         <div className="home--page--button--section">
-          <button className="home--page--buttons"onClick={() => window.open("https://www.linkedin.com/in/subhalaxmi-srichandan-2451a22ba/", "_blank")}> Get In Touch</button>
-          <button className="home--page--buttons"onClick={() => window.open("https://github.com/subhalaxmi-srichandan08", "_blank")}>See my work</button>
+          <button
+            className="home--page--buttons"
+            onClick={() => window.open("https://www.linkedin.com/in/subhalaxmi-srichandan-2451a22ba/", "_blank")}
+          >
+            Get In Touch
+          </button>
+          <button
+            className="home--page--buttons"
+            onClick={() => window.open("https://github.com/subhalaxmi-srichandan08", "_blank")}
+          >
+            See My Work
+          </button>
         </div>
       </div>
-      
+
       {/* Right Section - Profile Picture & Animation */}
       <div className="home--page--sub--section--profilepicture">
-        <Lottie animationData={developerAnimation} loop={true} />
+        <div>
+          <Lottie animationData={developerAnimation} loop={true} />
+        </div>
       </div>
     </div>
   );

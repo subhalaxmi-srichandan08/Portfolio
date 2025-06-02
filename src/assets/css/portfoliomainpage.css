@@ -1,18 +1,30 @@
-.portfolio--main--page{
-    margin: 0px;
-    padding: 0px;
-    border: 0.1px solid black;
-    height: 100%;
-    width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html {
-    scroll-behavior: smooth;
-  }
 
-  @media (max-width: 768px) {
-    .portfolio--main--page {
-      min-width: 100vw;
-      /* flex-direction: column; */
-      /* padding: 1rem; */
-    }
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+  /* overflow-y: auto; */
+}
+
+.portfolio--main--page {
+  border: 0.1px solid black;
+  min-height: 100vh; 
+  width: 100%;
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .portfolio--main--page {
+    min-width: 100vw;
+  }
 }

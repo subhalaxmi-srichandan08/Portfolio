@@ -1,107 +1,179 @@
+:root {
+  --border-radius: 8px;
+  --transition: all 0.3s ease-in-out;
+}
+
 .contact--main--container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: clamp(1rem, 5vw, 2rem);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact--header--section {
+  text-align: center;
+  padding-top: clamp(3rem, 10vw, 4rem);
+}
+
+.contact--header--paragraph {
+  font-size: clamp(1.8rem, 5vw, 2rem);
+  font-weight: 700;
+  color: darkmagenta;
+  margin-bottom: 0.5rem;
+}
+
+.contact--sub--body--paragraph {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  color: #666;
+}
+
+.contact--form--section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.contact--form--inputrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact--form--inputrow input {
+  flex: 1;
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  transition: var(--transition);
+}
+
+.contact--form--inputrow input::placeholder {
+  color: #666;
+}
+
+.contact--form--inputrow input:focus,
+.contact--form--inputrow input:hover,
+.contact--form--inputrow input:active {
+  border-color: #8e54e9;
+  background-color: #fff;
+  color: #333;
+}
+
+.contact--form--inputfull {
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  transition: var(--transition);
+}
+
+.contact--form--inputfull::placeholder {
+  color: #666;
+}
+
+.contact--form--inputfull:focus,
+.contact--form--inputfull:hover,
+.contact--form--inputfull:active {
+  border-color: #8e54e9;
+  background-color: #fff;
+  color: #333;
+}
+
+.contact--form--textarea {
+  min-height: 150px;
+  resize: vertical;
+  padding: clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  transition: var(--transition);
+}
+
+.contact--form--textarea::placeholder {
+  color: #666;
+}
+
+.contact--form--textarea:focus,
+.contact--form--textarea:hover,
+.contact--form--textarea:active {
+  border-color: #8e54e9;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Handle browser autofill */
+.contact--form--inputrow input:-webkit-autofill,
+.contact--form--inputrow input:-webkit-autofill:hover,
+.contact--form--inputrow input:-webkit-autofill:focus,
+.contact--form--inputfull:-webkit-autofill,
+.contact--form--inputfull:-webkit-autofill:hover,
+.contact--form--inputfull:-webkit-autofill:focus,
+.contact--form--textarea:-webkit-autofill,
+.contact--form--textarea:-webkit-autofill:hover,
+.contact--form--textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: #333;
+  background-color: #fff;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.contact--form--button {
+  width: 100%;
+  padding: clamp(0.5rem, 1.5vw, 0.75rem);
+  background: linear-gradient(to right, #4776E6, #8E54E9);
+  color: white;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-weight: 500;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.contact--form--button:hover {
+  background: linear-gradient(to right, #365de1, #783eea);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .contact--main--container {
+    padding: clamp(0.75rem, 4vw, 1.5rem);
   }
-  
-  .contact--header--section {
-    text-align: center;
-    /* margin-bottom: 2rem; */
-    /* color: darkmagenta */
-    padding-top: 4rem;
-  }
-  
-  .contact--header--paragraph {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 0.5rem;
-    color: darkmagenta  
-  }
-  
-  .contact--sub--body--paragraph {
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  .contact--form--section {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
+
   .contact--form--inputrow {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    /* background-color: #fff; */
+    flex-direction: column;
   }
-  
-  .contact--form--inputrow input {
-    flex: 1;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    outline: none;
-    transition: border 0.3s;
-    background-color: #fff;
+
+  .contact--header--paragraph {
+    font-size: clamp(1.6rem, 4.5vw, 1.8rem);
   }
-  
-  .contact--form--inputrow input:focus {
-    border-color: #8e54e9;
+
+  .contact--sub--body--paragraph {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
   }
-  
-  .contact--form--inputfull {
-    /* width: 100%; */
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    outline: none;
-    background-color: #fff;
-  }
-  
-  .contact--form--inputfull:focus {
-    border-color: #8e54e9;
-  }
-  
+}
+
+@media (max-width: 480px) {
+  .contact--form--inputrow input,
+  .contact--form--inputfull,
   .contact--form--textarea {
-    /* width: 100%; */
-    min-height: 150px;
-    resize: vertical;
-    padding: 1rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    outline: none;
-    background-color: #fff;
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
   }
-  
-  .contact--form--textarea:focus {
-    border-color: #8e54e9;
-  }
-  
+
   .contact--form--button {
-    width: 100%;
-    padding: 0.75rem;
-    background: linear-gradient(to right, #4776E6, #8E54E9);
-    color: white;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
   }
-  
-  .contact--form--button:hover {
-    background: linear-gradient(to right, #365de1, #783eea);
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 600px) {
-    .contact--form--inputrow {
-      flex-direction: column;
-    }
-  }
-  
+}

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import emailjs from "emailjs-com";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import "../assets/css/contact.css";
 
@@ -54,10 +54,6 @@ const ContactForm = () => {
     }
   };
 
-  // useEffect(() => {
-  //   emailjs.init("mzqZ4UVx_b4sAF6xS");
-  // }, []);
-
   return (
     <section className="contact--main--container">
       <motion.div
@@ -70,6 +66,7 @@ const ContactForm = () => {
         <p className="contact--sub--body--paragraph">
           I'd love to hear about your project or just say hello!
         </p>
+        <br/>
       </motion.div>
 
       <motion.form
@@ -127,6 +124,7 @@ const ContactForm = () => {
         </motion.button>
       </motion.form>
     </section>
+ // subbie-dubbie :) my bestie
   );
 };
 

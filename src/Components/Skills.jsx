@@ -91,6 +91,7 @@ function Skills() {
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
             >
+                <br/>
                 <h1 className='skills--tools--header'>Tools & Other Skills</h1>
                 <div className='skills--tools--section'>
                     {tools.map((tool, index) => (
