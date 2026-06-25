@@ -1,34 +1,40 @@
 import React from "react";
-import { Github, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { FaGithub as Github } from "react-icons/fa";
 import { motion } from "framer-motion";
 import "../assets/css/project.css";
 import coming_soon from "../assets/images/coming-soon2.jpg"
+import novaChat from "../assets/images/novachat.jpg";
+import pets from "../assets/images/pets.jpeg"
+import clone from "../assets/images/clone.jpeg"
 
 function Project() {
     const projects = [
         {
-            title: "E-Commerce Platform",
-            description: "A fully responsive e-commerce platform built with React and Node.js, featuring product listings, cart functionality, and secure checkout.",
-            tags: ["React", "Node.js", "Express", "MongoDB"],
-            github: "#",
-            demo: "#",
+            title: "NOVA CHAT",
+            description: "An AI-powered chat application built with React and Google Gemini AI, enabling users to have intelligent conversations with real-time responses in a modern and responsive interface.",
+            tags: ["React", "Google Gemini AI Model"],
+            github: "https://github.com/subhalaxmi-srichandan08/AI-CHAT-BOT-NovaChat",
+            demo: "https://nova-chat-subbu.netlify.app/",
+            image: novaChat
         },
         {
-            title: "Task Management App",
-            description: "A productivity app for managing tasks and projects with drag-and-drop functionality, notifications, and team collaboration features.",
-            tags: ["React", "Redux", "Firebase"],
-            github: "#",
+            title: "Paw Point",
+            description: "A veterinary appointment booking and pet care management platform that allows pet owners to schedule appointments, manage pet records, and connect with veterinary services seamlessly.",
+            tags: ["React", "Clerk", "Node", "Express", "PostgreSQL"],
+            github: "https://github.com/subhalaxmi-srichandan08/pet-ecommerce-FE",
             demo: "#",
+            image: pets
         },
         {
-            title: "Weather Dashboard",
-            description: "A real-time weather application with interactive maps, forecasts, and location-based services using multiple weather APIs.",
-            tags: ["React", "OpenWeather API", "Mapbox", "CSS3"],
-            github: "#",
-            demo: "#",
+            title: "Website Clone",
+            description: "A pixel-perfect responsive website clone developed using HTML5, CSS3, and JavaScript, replicating the original design and user experience while demonstrating strong frontend development skills.",
+            tags: ["HTML5", "CSS3", "JavaScript"],
+            github: "https://subhalaxmi-srichandan08.github.io/Gushwork-Assignment/",
+            demo: "https://subhalaxmi-srichandan08.github.io/Gushwork-Assignment/",
+            image: clone
         },
     ];
-
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -70,7 +76,7 @@ function Project() {
 
     return (
         <section className="project--main--section">
-            <motion.div 
+            <motion.div
                 className="project--header-section"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -82,7 +88,7 @@ function Project() {
                 </p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
                 className="project--body"
                 variants={containerVariants}
                 initial="hidden"
@@ -90,17 +96,17 @@ function Project() {
                 viewport={{ once: true, amount: 0.1 }}
             >
                 {projects.map((project, index) => (
-                    <motion.div 
+                    <motion.div
                         className="project--section--intro"
                         key={index}
                         variants={projectVariants(index)}
                         whileHover="hover"
                         style={{ opacity: 1 }}
                     >
-                        <img 
-                            src={coming_soon} 
-                            alt={project.title} 
-                            className="project-image" 
+                        <img
+                            src={project.image}
+                            alt={project.title}
+                            className="project-image"
                         />
 
                         <div className="project-content">
@@ -109,8 +115,8 @@ function Project() {
 
                             <div className="project--section--tags">
                                 {project.tags.map((tag, i) => (
-                                    <motion.span 
-                                        className="project--tags" 
+                                    <motion.span
+                                        className="project--tags"
                                         key={i}
                                         variants={tagVariants}
                                         whileHover="hover"
@@ -122,16 +128,16 @@ function Project() {
                         </div>
 
                         <div className="project-links">
-                            <motion.a 
-                                href={project.github} 
+                            <motion.a
+                                href={project.github}
                                 className="code-link"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
                                 <Github size={16} /> Code
                             </motion.a>
-                            <motion.a 
-                                href={project.demo} 
+                            <motion.a
+                                href={project.demo}
                                 className="demo-link"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
