@@ -3,10 +3,10 @@ import { ExternalLink } from "lucide-react";
 import { FaGithub as Github } from "react-icons/fa";
 import { motion } from "framer-motion";
 import "../assets/css/project.css";
-import coming_soon from "../assets/images/coming-soon2.jpg"
+
 import novaChat from "../assets/images/novachat.jpg";
-import pets from "../assets/images/pets.jpeg"
-import clone from "../assets/images/clone.jpeg"
+import pets from "../assets/images/pets.jpeg";
+import clone from "../assets/images/clone.jpeg";
 
 function Project() {
     const projects = [
@@ -22,7 +22,7 @@ function Project() {
             title: "Paw Point",
             description: "A veterinary appointment booking and pet care management platform that allows pet owners to schedule appointments, manage pet records, and connect with veterinary services seamlessly.",
             tags: ["React", "Clerk", "Node", "Express", "PostgreSQL"],
-            github: "https://github.com/subhalaxmi-srichandan08/pet-ecommerce-FE",
+            github: "https://github.com/subhalaxmi-srichandan08/pet-ecommerce",
             demo: "#",
             image: pets
         },
@@ -30,18 +30,17 @@ function Project() {
             title: "Website Clone",
             description: "A pixel-perfect responsive website clone developed using HTML5, CSS3, and JavaScript, replicating the original design and user experience while demonstrating strong frontend development skills.",
             tags: ["HTML5", "CSS3", "JavaScript"],
-            github: "https://subhalaxmi-srichandan08.github.io/Gushwork-Assignment/",
-            demo: "https://subhalaxmi-srichandan08.github.io/Gushwork-Assignment/",
+            github: "https://github.com/subhalaxmi-srichandan08/Gushwork-Assignment",
+            demo: "https://website-clone-hdpe.netlify.app/",
             image: clone
         },
     ];
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            transition: {
-                staggerChildren: 0.2
-            }
+            transition: { staggerChildren: 0.2 }
         }
     };
 
@@ -60,18 +59,12 @@ function Project() {
         hover: {
             y: -8,
             boxShadow: "0 20px 35px rgba(0,0,0,0.12)",
-            transition: {
-                type: "spring",
-                stiffness: 200
-            }
+            transition: { type: "spring", stiffness: 200 }
         }
     });
 
     const tagVariants = {
-        hover: {
-            scale: 1.1,
-            transition: { duration: 0.2 }
-        }
+        hover: { scale: 1.1, transition: { duration: 0.2 } }
     };
 
     return (
@@ -101,13 +94,14 @@ function Project() {
                         key={index}
                         variants={projectVariants(index)}
                         whileHover="hover"
-                        style={{ opacity: 1 }}
                     >
-                        <img
-                            src={project.image}
-                            alt={project.title}
-                            className="project-image"
-                        />
+                        <div className="project-image-container">
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="project-image"
+                            />
+                        </div>
 
                         <div className="project-content">
                             <h3 className="project-title">{project.title}</h3>
@@ -133,6 +127,8 @@ function Project() {
                                 className="code-link"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 <Github size={16} /> Code
                             </motion.a>
@@ -141,6 +137,8 @@ function Project() {
                                 className="demo-link"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                target={project.demo === "#" ? "_self" : "_blank"}
+                                rel="noopener noreferrer"
                             >
                                 <ExternalLink size={16} /> Demo
                             </motion.a>
