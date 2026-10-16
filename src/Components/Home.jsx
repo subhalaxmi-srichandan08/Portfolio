@@ -8,7 +8,7 @@ import { IoMdDownload } from "react-icons/io";
 
 function Home() {
   const openPDF = () => {
-    const pdfUrl = "https://drive.google.com/file/d/1e2B8lAuLyBZsLQXnFTxrNfRuZ--QUce0/view?usp=drive_link";
+    const pdfUrl = "https://drive.google.com/file/d/1vDWwlJ3Krl0JS8tpjnet0Jen3FfmM3dV/view?usp=drive_link";
     window.open(pdfUrl, "_blank");
   };
 

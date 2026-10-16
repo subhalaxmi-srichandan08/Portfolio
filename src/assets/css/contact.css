@@ -177,3 +177,21 @@
     font-size: clamp(0.8rem, 1.8vw, 0.9rem);
   }
 }
+.social--handler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.social--handler a {
+  color: inherit;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social--handler a:hover {
+  color: #0a66c2; /* LinkedIn blue */
+  transform: translateY(-3px);
+}

@@ -4,19 +4,19 @@ import "../assets/css/skills.css";
 
 function Skills() {
     const frontendSkills = [
-        { name: 'React', level: 90 },
-        { name: 'JavaScript', level: 85 },
-        { name: 'TypeScript', level: 70 },
+        { name: 'React', level: 85 },
+        { name: 'JavaScript', level: 90},
+        { name: 'TypeScript', level: 40 },
         { name: 'HTML & CSS', level: 75 },
-        { name: 'Tailwind CSS', level: 65 },
+        { name: 'Tailwind CSS', level: 55 },
     ];
 
     const backendSkills = [
         { name: 'Node.js', level: 85 },
         { name: 'Express', level: 80 },
-        { name: 'MongoDB', level: 80 },
-        { name: 'RESTful APIs', level: 80 },
-        { name: 'SQL', level: 55 }
+        { name: 'MongoDB', level: 85 },
+        { name: 'RESTful APIs', level: 85 },
+        { name: 'SQL', level: 50 }
     ];
 
     const tools = [

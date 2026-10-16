@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import "../assets/css/contact.css";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -63,6 +64,27 @@ const ContactForm = () => {
         transition={{ duration: 0.6 }}
       >
         <h2 className="contact--header--paragraph">Let's Get in Touch</h2>
+        
+<div className="social--handler">
+  <a
+    href="https://www.linkedin.com/in/subhalaxmi22/"
+    target="_blank"
+    rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
+          >
+            <FaLinkedin />
+          </a>
+
+          <a
+            href="https://github.com/subhalaxmi-srichandan08"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub Profile"
+          >
+            <FaGithub />
+          </a>
+        </div>
+
         <p className="contact--sub--body--paragraph">
           I'd love to hear about your project or just say hello!
         </p>

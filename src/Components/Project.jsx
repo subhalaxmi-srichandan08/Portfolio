@@ -11,20 +11,20 @@ import clone from "../assets/images/clone.jpeg";
 function Project() {
     const projects = [
         {
+            title: "Paw Point",
+            description: "A veterinary appointment booking and pet care management platform that allows pet owners to schedule appointments, manage pet records, and connect with veterinary services seamlessly.",
+            tags: ["React", "Clerk", "Node", "Express", "PostgreSQL"],
+            github: "https://pawpoint-pet-ecommerce.netlify.app/login",
+            demo: "#",
+            image: pets
+        },
+        {
             title: "NOVA CHAT",
             description: "An AI-powered chat application built with React and Google Gemini AI, enabling users to have intelligent conversations with real-time responses in a modern and responsive interface.",
             tags: ["React", "Google Gemini AI Model"],
             github: "https://github.com/subhalaxmi-srichandan08/AI-CHAT-BOT-NovaChat",
             demo: "https://nova-chat-subbu.netlify.app/",
             image: novaChat
-        },
-        {
-            title: "Paw Point",
-            description: "A veterinary appointment booking and pet care management platform that allows pet owners to schedule appointments, manage pet records, and connect with veterinary services seamlessly.",
-            tags: ["React", "Clerk", "Node", "Express", "PostgreSQL"],
-            github: "https://github.com/subhalaxmi-srichandan08/pet-ecommerce",
-            demo: "#",
-            image: pets
         },
         {
             title: "Website Clone",
